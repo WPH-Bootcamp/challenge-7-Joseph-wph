@@ -3,7 +3,7 @@ import PortofolioItem from "./PortofolioItem";
 
 const FromVision = () => {
   return (
-    <section id="Projects" className="bg-black text-white py-24">
+    <section id="Projects" className=" py-24">
       <div className="max-w-[1200px] mx-auto px-4 mt-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-semibold">

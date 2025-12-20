@@ -3,7 +3,7 @@ import CardItem from "./CardItem";
 
 export default function CardGrid() {
   return (
-    <section id="#" className="bg-black text-white py-24">
+    <section id="#" className=" py-24">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-semibold">

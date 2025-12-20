@@ -14,7 +14,7 @@ export default function PortofolioItem({ image, title, desc }: Props) {
 
       <div className="p-3">
         <p className="text-orange-400 text-sm mt-2">{desc}</p>
-        <h3 className="text-white text-lg font-semibold">{title}</h3>
+        <h3 className=" text-lg font-semibold">{title}</h3>
       </div>
     </div>
   );

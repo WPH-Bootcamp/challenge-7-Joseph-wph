@@ -8,11 +8,20 @@ const links = [
 
 export default function FooterNav() {
   return (
-    <nav className="flex flex-col md:flex-row gap-6 text-sm text-white/80">
+    <nav className="
+      flex flex-col md:flex-row gap-6 text-sm
+      text-gray-600
+      dark:text-white/80
+    ">
       {links.map((link) => (
         <a
+          key={link.id}
           href={`#${link.id}`}
-          className="hover:text-orange-400 cursor-pointer"
+          className="
+            cursor-pointer
+            hover:text-orange-500
+            transition-colors
+          "
         >
           {link.label}
         </a>
@@ -20,3 +29,4 @@ export default function FooterNav() {
     </nav>
   );
 }
+

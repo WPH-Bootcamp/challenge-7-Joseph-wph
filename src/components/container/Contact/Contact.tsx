@@ -7,14 +7,20 @@ export default function Contact() {
   const [successOpen, setSuccessOpen] = useState(false);
   const [errorOpen, setErrorOpen] = useState(false);
 
-  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (data: {
+    name: string;
+    email: string;
+    message: string;
+  }) => {
+    // ❌ VALIDASI
+    if (!data.name || !data.email || !data.message) {
+      setErrorOpen(true);
+      return;
+    }
 
     try {
-      await new Promise((resolve, reject) =>
-        setTimeout(() => (Math.random() > 0.3 ? resolve(true) : reject()), 1000)
-      );
-
+      // simulasi API
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       setSuccessOpen(true);
     } catch {
       setErrorOpen(true);
@@ -26,8 +32,8 @@ export default function Contact() {
       <ContactSection onSubmit={handleSubmit} />
 
       <SuccessModal open={successOpen} onClose={() => setSuccessOpen(false)} />
-
       <ErrorModal open={errorOpen} onClose={() => setErrorOpen(false)} />
     </>
   );
 }
+

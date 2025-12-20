@@ -2,7 +2,7 @@ import StateLogic from "./StateLogic";
 
 const Build = () => {
   return (
-    <section id="Services" className="bg-black text-white py-15">
+    <section id="Services" className="py-15">
         <div>
           <StateLogic />
         </div>

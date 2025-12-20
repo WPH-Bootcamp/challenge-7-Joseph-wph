@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Hero from "./components/container/HeroSection/Hero";
 import Navbar from "./components/container/Navbar/Navbar";
 import Trusted from "./components/container/Trusted/Trusted";
@@ -12,8 +14,23 @@ import Contact from "./components/container/Contact/Contact";
 import Footer from "./components/container/Footer/Footer";
 
 function App() {
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const applyTheme = () => {
+      document.documentElement.classList.toggle("dark", media.matches);
+    };
+
+    applyTheme();
+    media.addEventListener("change", applyTheme);
+
+    return () => {
+      media.removeEventListener("change", applyTheme);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="bg-white text-black dark:bg-black dark:text-white">
       <Navbar />
       <Hero />
       <Trusted />
@@ -31,3 +48,4 @@ function App() {
 }
 
 export default App;
+

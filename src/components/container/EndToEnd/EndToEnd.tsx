@@ -9,7 +9,7 @@ const stats = [
 
 export default function EndToEnd() {
   return (
-    <section className="bg-black text-white py-24">
+    <section className=" py-24">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Title */}
         <div className="text-center mb-16">

@@ -3,7 +3,7 @@ import ConsultationCard from "./ConsultationCard";
 
 export default function FAQSection() {
   return (
-    <section id="FAQ" className="bg-black text-white py-16">
+    <section id="FAQ" className=" py-16">
       {/* HEADER */}
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-semibold mb-2">Need Help? Start Here.</h2>
